@@ -9,39 +9,85 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="main.js" defer></script>
+    <script>
+        $(document).ready(function(){
+          $('.slider').bxSlider();
+        });
+      </script>
+    
 </head>
 <body>
     <!-- Header -->
     <header>
-        <ul class="header__language">
-            <li>KOREA</li>
-            <li>JAPAN</li>
-            <li>INTERNATIONAL</li>
-        </ul>
-        <div class="header__customer-menu">
-            <a href="">LOGIN</a>
-            <a href="">JOIN</a>
-            <a href="">CART</a>
-            <a href="">ORDER</a>
-            <a href="">MY PAGE</a>
+        <div class="header__menu">
+            <div class="header__language">
+                <a>KOREA</a>
+                <a>JAPAN</a>
+                <a>INTERNATIONAL</a>
+            </div>
+            <div class="header__customer-menu">
+                <a href="">LOGIN</a>
+                <a href="">JOIN</a>
+                <a href="">CART</a>
+                <a href="">ORDER</a>
+                <a href="">MY PAGE</a>
+                <a>
+                    <i class="fab fa-instagram-square"></i>
+                </a>
+            </div>
         </div>
         <h1>depound</h1>
-        <!-- Navbar -->
-        <nav>
-            <a href="">ABOUT US</a>
-            <a href="">SHOP</a>
-            <a href="">REVIEW</a>
-            <a href="">LOOKBOOK</a>
-            <a href="">STORE</a>
-            <a href="">COMMUNITY</a>
-        </nav>
     </header>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="">ABOUT US</a></li>
+            <li class="active nav__shop">
+                <a href="">SHOP</a>
+                <ul class="dropdown">
+                    <li></li>
+                    <li><a href="">ALL</a></li>
+                    <li><a href="">NEW</a></li>
+                    <li><a href="">BEST</a></li>
+                    <li><a href="">BAG</a></li>
+                    <li><a href="">FASHION</a></li>
+                    <li><a href="">LIFE STYLE</a></li>
+                    <li><a href="">EXCLUSIVE</a></li>
+                    <li><a href="">SPECIAL EDITION</a></li>
+                    <li><a href="">CELEB'S PICK</a></li>
+                </ul>
+            </li>
+            <li><a href="">REVIEW</a></li>
+            <li><a href="">LOOKBOOK</a></li>
+            <li><a href="">STORE</a></li>
+            <li class="nav__comm">
+                <a href="">COMMUNITY</a>
+                <ul class="dropdown">
+                    <li></li>
+                    <li><a href="">NOTICE</a></li>
+                    <li><a href="">Q & A</a></li>
+                    <li><a href="">PRESS</a></li>
+                </ul>
+                
+            </li>
+        </ul>
+    </nav>
     <!-- Main -->
     <main>
         <section class="main__imgs">
-            <img src="/imgs/home1.jpg" alt="">
+            <ul class="bxslider">
+                <li><img src="/imgs/home1.jpg" alt=""></li>
+                <li><img src="/imgs/home2.jpg" alt=""></li>
+                <li><img src="/imgs/home3.jpg" alt=""></li>
+                <li><img src="/imgs/home4.jpg" alt=""></li>
+                <li><img src="/imgs/home5.jpg" alt=""></li>
+            </ul>
         </section>
         <section class="main__lookbook">
             <a href="">concept lookbook</a>
@@ -50,26 +96,27 @@
     <!-- Footer -->
     <footer>
         <div class="footer__callbank">
-            <span class="footer__callbank__call">
-                CUSTOMER SERVICE: 070-4848-3226 MONDAY - FRIDAY 1PM - 6PM SAT SUN HOLIDAY CLOSED
+            <span>
+                <b>CUSTOMER SERVICE:</b> 070-4848-3226 &nbsp;&nbsp;&nbsp;MONDAY - FRIDAY 1PM - 6PM SAT SUN HOLIDAY CLOSED
             </span>
-            <span class="bank">
-                BANK ACCOUNT: KB 762301-04-284369 ACCOUNT HOLDER: (주)드파운드
+            <span>
+                <b>BANK ACCOUNT:</b> KB 762301-04-284369&nbsp;&nbsp;&nbsp;
+                <b>ACCOUNT HOLDER:</b> (주)드파운드
             </span>
         </div>
-        <ul class="footer__menu">
-            <li>HOME</li>
-            <li>GUIDE</li>
-            <li>AGREEMENT</li>
-            <li>PRIVACY POLICY</li>
-            <li>DELIVERY</li>
-        </ul>
-        <p class="footer_info">
+        <div class="footer__menu">
+            <a>HOME</a>
+            <a>GUIDE</a>
+            <a>AGREEMENT</a>
+            <a>PRIVACY POLICY</a>
+            <a>DELIVERY</a>
+        </div>
+        <p class="footer__info">
             COMPANY: (주)드파운드 OWNER: EUN-JUNG JUNG / HYUN-SOO CHO TEL: 070-4848-3226<br/>
             ADDRESS: B2-201, BYC HIGHCITY B, 131, GASAN DIGITAL 1-RO, GEUMCHEON-GU, SEOUL, REPUBLIC OF KOREA BUSINESS LISENCE: 494-86-01659 MAIN-ORDER LICENSE: No. 2019-SEOULMAPO-1862 [사업자정보확인]
         </p>
         <p class="footer__contact">
-            CONTACT: help@depound.com
+            <b>CONTACT: help@depound.com</b>
         </p>
         <div class="footer__logos">
             <a 
@@ -77,22 +124,16 @@
             class="logo"
             target="blank">
             <img src="/imgs/logo_inicis.png" alt="">
-            <p>KB에스크로<br/>
-            결제시스템</p>
             </a>
             <a 
             href="" 
             class="logo">
-            <img src="/imgs/logo_inicis.png" alt="">
-            <p>공정거래위원회<br/>
-            인증표준약관사용</p>
+            <img src="/imgs/logo_ftc.png" alt="">
             </a>
             <a 
             href="" 
             class="logo">
-            <img src="/imgs/logo_inicis.png" alt="">
-            <p>SSL 결제보안<br/>
-            인증사이트</p>
+            <img src="/imgs/logo_ssl.png" alt="">
             </a>
         </div>
     </footer>
